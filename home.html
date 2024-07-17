@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corsair Newsletter</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Reset some default styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Header and Navigation */
+    header {
+      background-color: #0b0b0b;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ff6b6b;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 2rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ccc;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image: url('pexels-photo-3095621.jpeg');
+      background-size: cover;
+      background-position: center;
+      height: 110vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero .cool-line {
+      font-size: 1.5rem;
+      font-weight: bold;
+      background-color: #ff6b6b;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      margin-bottom: 2rem;
+    }
+
+    .hero .news-reading {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin-bottom: 2rem;
+    }
+
+    .cta {
+      display: inline-block;
+      background-color: #ff6b6b;
+      color: #fff;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta:hover {
+      background-color: #ff4d4d;
+    }
+
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      padding: 4rem 2rem;
+    }
+
+    .feature {
+      background-color: #f5f5f5;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature i {
+      font-size: 2.5rem;
+      color: #ff6b6b;
+      margin-bottom: 1rem;
+    }
+
+    .feature h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature p {
+      font-size: 0.9rem;
+    }
+
+    /* About Corsair Section */
+    .about-corsair {
+      background-color: #0b0b0b;
+      color: #fff;
+      padding: 4rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-content {
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .about-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-content p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .learn-more {
+      display: inline-block;
+      background-color: #ff6b6b;
+      color: #fff;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .learn-more:hover {
+      background-color: #ff4d4d;
+    }
+
+    /* Newsletter Signup Section */
+    .newsletter-signup {
+      background-color: #f5f5f5;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .newsletter-signup h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .newsletter-signup p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .newsletter-signup form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .newsletter-signup input[type="email"] {
+      border: none;
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 4px 0 0 4px;
+      width: 300px;
+    }
+
+    .newsletter-signup button[type="submit"] {
+      background-color: #ff6b6b;
+      border: none;
+      color: #fff;
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .newsletter-signup button[type="submit"]:hover {
+      background-color: #ff4d4d;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0b0b0b;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .social-links {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .social-links li {
+      margin: 0 1rem;
+    }
+
+    .social-links a {
+      color: #fff;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #ccc;
+    }
+
+    .copyright {
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Corsair</div>
+    <nav>
+      <ul>
+        <!-- <li><a href="#">Home</a></li> -->
+        <li><a href="industrynews.html">Industry News</a></li>
+        <li><a href="producthighlights.html">Product Highlights</a></li>
+        <li><a href="tips.html">Tips and Tutorials</a></li>
+        <li><a href="community.html">Community</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Unlock the Power of PC Enthusiasts</h1>
+      <h2>Stay informed with the Corsair Newsletter</h2>
+      <p>Get the latest industry news, product updates, and expert insights.</p>
+      <div class="cool-line">Elevate your PC experience with Corsair</div>
+      <div class="news-reading">Enjoy a seamless and engaging news reading experience</div>
+      <a href="subscribenow.html" class="cta">Subscribe Now</a>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <i class="fas fa-newspaper"></i>
+        <h3>Industry News and Trends</h3>
+        <p>Stay ahead of the curve with the latest developments in PC hardware, software, and gaming.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-box-open"></i>
+        <h3>Corsair Product Highlights</h3>
+        <p>Get an inside look at Corsair's newest products and exclusive sneak peeks.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-graduation-cap"></i>
+        <h3>Expert Tips and Tutorials</h3>
+        <p>Unlock the full potential of your Corsair setup with expert guides and tutorials.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-users"></i>
+        <h3>Community Spotlight</h3>
+        <p>Discover incredible PC builds, setups, and mods from our passionate community.</p>
+      </div>
+    </section>
+
+    <section class="about-corsair">
+      <div class="about-content">
+        <h2>About Corsair</h2>
+        <p>Corsair is a leading global developer and manufacturer of high-performance gear and technology for gamers, content creators, and PC enthusiasts. From award-winning PC components and peripherals to premium streaming equipment and smart ambient lighting, Corsair delivers a full ecosystem of products that enable everyone, from casual gamers to committed professionals, to perform at their very best.</p>
+        <a href="learnmore.html" class="learn-more">Learn More</a>
+      </div>
+    </section>
+
+    <section class="newsletter-signup">
+      <h2>Join the Corsair Newsletter</h2>
+      <p>Be the first to know about the latest Corsair news, product releases, and exclusive offers.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <ul class="social-links">
+      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+    </ul>
+    <div class="copyright">
+      &copy; 2024 Corsair. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>

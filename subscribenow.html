@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corsair Newsletter - Subscribe Now</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Reset some default styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #0b0b0b;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ff6b6b;
+    }
+
+    /* Main Content */
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-plans {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      width: 100%;
+    }
+
+    .plan-card {
+      background-color: #f5f5f5;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .plan-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .plan-card p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .plan-price {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .subscribe-btn {
+      display: inline-block;
+      background-color: #ff6b6b;
+      color: #fff;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .subscribe-btn:hover {
+      background-color: #ff4d4d;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0b0b0b;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .social-links {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .social-links li {
+      margin: 0 1rem;
+    }
+
+    .social-links a {
+      color: #fff;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #ccc;
+    }
+
+    .copyright {
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Corsair</div>
+  </header>
+
+  <main>
+    <h1 class="section-title">Subscribe to the Corsair Newsletter</h1>
+
+    <div class="pricing-plans">
+      <div class="plan-card">
+        <h3>Basic</h3>
+        <p>Get the essential industry news and product updates.</p>
+        <div class="plan-price">Free</div>
+        <a href="#" class="subscribe-btn">Subscribe</a>
+      </div>
+
+      <div class="plan-card">
+        <h3>Standard</h3>
+        <p>Unlock access to expert tips, tutorials, and community highlights.</p>
+        <div class="plan-price">$9.99/month</div>
+        <a href="#" class="subscribe-btn">Subscribe</a>
+      </div>
+
+      <div class="plan-card">
+        <h3>Premium</h3>
+        <p>Enjoy exclusive content, early access, and special offers.</p>
+        <div class="plan-price">$14.99/month</div>
+        <a href="#" class="subscribe-btn">Subscribe</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <ul class="social-links">
+      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+    </ul>
+    <div class="copyright">
+      &copy; 2024 Corsair. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
